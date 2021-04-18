@@ -18,6 +18,7 @@
   "homepage": "https://github.com/waqasshah191/project1-employees-directory#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongodb": "^3.6.6"
+    "mongodb": "^3.6.6",
+    "pug": "^3.0.2"
   }
 }

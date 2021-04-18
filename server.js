@@ -4,11 +4,16 @@ const employees = require('./model/employeedatainMongo')
 const port = process.env.PORT || 3000
 
 const app = express()
+app.set('view engine', 'pug')
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  let employeeList = employees.listEmployees()
+  res.render('index', { employees: employeeList })
 })
+
+
 
 app.post('/employee/create', async (req, res) => {
     let firstName = req.body.firstName
